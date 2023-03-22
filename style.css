@@ -6,7 +6,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   font-family: 'Inter', sans-serif;
   font-size: 40px;
@@ -22,5 +23,3 @@ header {
 nav {
   align-self: flex-end;
 }
-
-
