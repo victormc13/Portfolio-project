@@ -116,7 +116,7 @@ h1::after {
   display: grid;
   justify-items: center;
   grid-auto-rows: 29rem;
-  grid-template-columns: repeat(auto-fill, minmax(22rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
   gap: 2rem;
 }
 
@@ -181,7 +181,7 @@ h1::after {
 }
 
 .about-me {
-  height: 65vh;
+  height: 57vh;
   margin-top: 3.5rem;
   align-items: center;
   text-align: center;
@@ -216,4 +216,29 @@ h1::after {
   color: var(--primary-white-light);
   background: var(--project-btn);
   border-radius: 4px;
+}
+
+.skillcards-container {
+  align-items: center;
+}
+
+.skill-cards {
+  width: 300px;
+  height: 270px;
+  padding: 3rem 1.5rem;
+  text-align: center;
+  justify-content: flex-end;
+  gap: 3rem;
+  border-radius: 8px;
+  border: 2px solid #d0d9d4;
+}
+
+.tags {
+  gap: 1rem;
+  justify-content: center;
+
+}
+
+.tags li {
+  padding: 6px 8px;
 }
