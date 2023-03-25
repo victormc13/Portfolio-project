@@ -178,6 +178,20 @@ h1::after {
   border: none;
   color: var(--primary-white-light);
   background-color: var(--project-btn);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background: var(--project-btn);
+  box-shadow: 0 8px 16px rgba(54, 179, 127, 0.24);
+}
+
+.btn:enabled {
+  background: var(--project-btn);
+}
+
+.btn:active {
+  background: #008552;
 }
 
 .about-me {
@@ -216,29 +230,63 @@ h1::after {
   color: var(--primary-white-light);
   background: var(--project-btn);
   border-radius: 4px;
+  cursor: pointer;
 }
 
 .skillcards-container {
+  padding-top: 4rem;
   align-items: center;
+  gap: 2rem;
 }
 
 .skill-cards {
-  width: 300px;
-  height: 270px;
-  padding: 3rem 1.5rem;
+  width: 327px;
+  height: 316px;
+  padding: 0 2rem 4rem;
   text-align: center;
   justify-content: flex-end;
-  gap: 3rem;
+  align-items: center;
+  gap: 1.5rem;
   border-radius: 8px;
   border: 2px solid #d0d9d4;
+  background-color: #ebf0ee;
+  background-repeat: no-repeat;
+  background-position: center 40px;
+}
+
+.card-1 {
+  background-image: url(icons/icon-languages.svg);
+}
+
+.card-2 {
+  background-image: url(icons/icon-frameworks.svg);
+}
+
+.card-3 {
+  background-image: url(icons/icon-skills.svg);
+}
+
+.skill-cards h3 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
 }
 
 .tags {
-  gap: 1rem;
+  width: 293px;
+  height: 40px;
+  gap: 0.5rem;
   justify-content: center;
-
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .tags li {
-  padding: 6px 8px;
+  padding: 12px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 12px;
+  border-radius: 8px;
+  color: var(--primary-green);
+  background-color: var(--primary-white-light);
 }
