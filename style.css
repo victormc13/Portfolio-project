@@ -31,6 +31,7 @@ nav {
   padding: 1rem;
   height: 50px;
   width: 100%;
+  position: fixed;
   align-items: center;
   justify-content: flex-end;
 }
@@ -72,6 +73,7 @@ h1::after {
   justify-content: flex-end;
   align-items: center;
   background-size: cover;
+  background-position: top center;
   background-repeat: no-repeat;
   background-image: url(icons/header-illsutration-mobile.svg);
 }
