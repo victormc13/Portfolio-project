@@ -31,7 +31,6 @@ nav {
   padding: 1rem;
   height: 50px;
   width: 100%;
-  position: fixed;
   align-items: center;
   justify-content: flex-end;
 }
@@ -51,6 +50,7 @@ h1::after {
 
 .menu-btn {
   float: right;
+  position: fixed;
   border-style: none;
   background-color: transparent;
   cursor: pointer;
