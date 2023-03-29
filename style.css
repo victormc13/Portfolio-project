@@ -59,6 +59,7 @@ h1::after {
 .flex-column {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .flex-row {
@@ -71,7 +72,6 @@ h1::after {
   padding: 2.5rem 2rem 2rem;
   gap: 1rem;
   justify-content: flex-end;
-  align-items: center;
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -86,7 +86,9 @@ h1::after {
   line-height: 28px;
 }
 
-.social-media {
+.social-media,
+a:visited {
+  color: var(--primary-blue-dark);
   gap: 1rem;
   align-items: baseline;
 }
@@ -100,6 +102,12 @@ h1::after {
   border: 1px solid #dfe1e6;
   background-color: var(--primary-white-light);
   cursor: pointer;
+}
+
+main {
+  background-repeat: no-repeat;
+  background-position: right 98.6%;
+  background-image: url(icons/illustration-contact-form.svg);
 }
 
 .main-title {
@@ -134,7 +142,6 @@ h1::after {
 .content-cards {
   width: 325px;
   height: 260px;
-  align-items: center;
   padding: 1rem 0 1.5rem;
   justify-content: space-between;
   gap: 1rem;
@@ -199,13 +206,13 @@ h1::after {
 .about-me {
   height: 57vh;
   margin-top: 3.5rem;
-  align-items: center;
   text-align: center;
   gap: 1.5rem;
   justify-content: flex-end;
   background-repeat: no-repeat;
   background-position: top right, bottom left;
-  background-image: url(icons/illustration\ 1-\ about\ me-mobile.svg),
+  background-image:
+    url(icons/illustration\ 1-\ about\ me-mobile.svg),
     url(icons/illustration\ 2-about\ me\ mobile.svg);
 }
 
@@ -236,7 +243,6 @@ h1::after {
 
 .skillcards-container {
   padding-top: 4rem;
-  align-items: center;
   gap: 2rem;
 }
 
@@ -246,7 +252,6 @@ h1::after {
   padding: 0 2rem 4rem;
   text-align: center;
   justify-content: flex-end;
-  align-items: center;
   gap: 1.5rem;
   border-radius: 8px;
   border: 2px solid #d0d9d4;
@@ -293,7 +298,6 @@ h1::after {
 }
 
 .contact-section {
-  width: 100%;
   margin-top: 3rem;
   padding: 1rem;
   text-align: center;
@@ -306,14 +310,70 @@ h1::after {
   line-height: 52px;
 }
 
-.input-item input {
-  max-width: 100%;
-  height: 48px;
-  padding: 1rem;
-  border-radius: 4px;
-  justify-content: center;
+.form-fields {
+  gap: 2rem;
+  text-align: center;
 }
 
-form {
+.form-fields input {
+  min-width: 327px;
+  min-height: 48px;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 1rem;
+  justify-content: center;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+}
+
+.form-fields textarea {
+  width: 327px;
+  height: 114px;
+  padding: 1rem;
+  font-size: 15px;
+  line-height: 24px;
+  border: 1px solid #d0d9d4;
+  border-radius: 4px;
+  resize: none;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-image: url(icons/Icon\ -\ Resizer\ Handle.svg);
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid #60c095;
+  font-weight: 400;
+  font-size: 1rem;
+}
+
+.form-btn {
+  width: 129px;
+  height: 48px;
+  margin-top: 1rem;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 4px;
+  border: none;
+  color: var(--primary-white-light);
+  background-color: var(--project-btn);
+  cursor: pointer;
+}
+
+.footer-section {
+  min-height: 150px;
+  padding-top: 1rem;
   gap: 2rem;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url(icons/Light.svg);
+}
+
+.footer-section > a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  color: #42526e;
 }
