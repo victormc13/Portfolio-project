@@ -106,7 +106,7 @@ a:visited {
 
 main {
   background-repeat: no-repeat;
-  background-position: right 98.8%;
+  background-position: right 98.6%;
   background-image: url(icons/illustration-contact-form.svg);
 }
 
@@ -363,8 +363,12 @@ textarea:focus {
 }
 
 .footer-section {
-  padding-top: 2rem;
-  gap: 3rem;
+  min-height: 150px;
+  padding-top: 1rem;
+  gap: 2rem;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url(icons/Light.svg);
 }
 
 .footer-section > a {
