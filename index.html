@@ -9,15 +9,20 @@
   </head>
 
   <body>
-    <header>
-      <nav class="flex-row">
+    <header class="flex-column">
+      <nav class="nav-mobile hidden-mobile flex-row">
         <button class="menu-btn">
           <img src="icons/Icon - Menu.svg" alt="menu button" />
         </button>
       </nav>
+      <nav class="nav-desktop hidden-desktop flex-row">
+        <a href="#Portfolio">Portfolio</a>
+        <a href="#About">About</a>
+        <a href="#Contact">Contact</a>
+      </nav>
       <!-- Intro section -->
       <section class="intro-container flex-column">
-        <h1>Hey there.<br />I’m Victor.<br /></h1>
+        <h1>Hey there. I’m Victor.<br /></h1>
         <p>
           I can help you build a product , feature or website Look through some
           of my work and experience! If you like what you see and have a project
@@ -59,84 +64,86 @@
       </section>
     </header>
     <main>
-      <h2 class="main-title flex-column">My Recent<br />Works</h2>
       <!-- My Recent works section -->
-      <section class="work-section">
-        <article class="project-cards flex-column">
-          <div class="content-cards flex-column">
-            <h3>Multi-Post Stories<br />Gain+Glory</h3>
-            <ul class="technologies flex-row">
-              <li>Ruby on Rails</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-            </ul>
-            <button class="project-btn btn">See project</button>
-          </div>
-        </article>
-        <article class="project-cards flex-column">
-          <div class="content-cards flex-column">
-            <h3>Multi-Post Stories<br />Gain+Glory</h3>
-            <ul class="technologies flex-row">
-              <li>Ruby on Rails</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-            </ul>
-            <button class="project-btn btn">See project</button>
-          </div>
-        </article>
-        <article class="project-cards flex-column">
-          <div class="content-cards flex-column">
-            <h3>Multi-Post Stories<br />Gain+Glory</h3>
-            <ul class="technologies flex-row">
-              <li>Ruby on Rails</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-            </ul>
-            <button class="project-btn btn">See project</button>
-          </div>
-        </article>
-        <article class="project-cards flex-column">
-          <div class="content-cards flex-column">
-            <h3>Multi-Post Stories<br />Gain+Glory</h3>
-            <ul class="technologies flex-row">
-              <li>Ruby on Rails</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-            </ul>
-            <button class="project-btn btn">See project</button>
-          </div>
-        </article>
-        <article class="project-cards flex-column">
-          <div class="content-cards flex-column">
-            <h3>Multi-Post Stories<br />Gain+Glory</h3>
-            <ul class="technologies flex-row">
-              <li>Ruby on Rails</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-            </ul>
-            <button class="project-btn btn">See project</button>
-          </div>
-        </article>
-        <article class="project-cards flex-column">
-          <div class="content-cards flex-column">
-            <h3>Multi-Post Stories<br />Gain+Glory</h3>
-            <ul class="technologies flex-row">
-              <li>Ruby on Rails</li>
-              <li>CSS</li>
-              <li>JavaScript</li>
-              <li>HTML</li>
-            </ul>
-            <button class="project-btn btn">See project</button>
-          </div>
-        </article>
+      <section id="Portfolio" class="work-section flex-column">
+        <h2 class="main-title flex-column">My Recent<br />Works</h2>
+        <div class="projectcards-container">
+          <article class="project-cards flex-column">
+            <div class="content-cards flex-column">
+              <h3>Multi-Post Stories<br />Gain+Glory</h3>
+              <ul class="technologies flex-row">
+                <li>Ruby on Rails</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+              </ul>
+              <button class="project-btn btn">See project</button>
+            </div>
+          </article>
+          <article class="project-cards flex-column">
+            <div class="content-cards flex-column">
+              <h3>Multi-Post Stories<br />Gain+Glory</h3>
+              <ul class="technologies flex-row">
+                <li>Ruby on Rails</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+              </ul>
+              <button class="project-btn btn">See project</button>
+            </div>
+          </article>
+          <article class="project-cards flex-column">
+            <div class="content-cards flex-column">
+              <h3>Multi-Post Stories<br />Gain+Glory</h3>
+              <ul class="technologies flex-row">
+                <li>Ruby on Rails</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+              </ul>
+              <button class="project-btn btn">See project</button>
+            </div>
+          </article>
+          <article class="project-cards flex-column">
+            <div class="content-cards flex-column">
+              <h3>Multi-Post Stories<br />Gain+Glory</h3>
+              <ul class="technologies flex-row">
+                <li>Ruby on Rails</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+              </ul>
+              <button class="project-btn btn">See project</button>
+            </div>
+          </article>
+          <article class="project-cards flex-column">
+            <div class="content-cards flex-column">
+              <h3>Multi-Post Stories<br />Gain+Glory</h3>
+              <ul class="technologies flex-row">
+                <li>Ruby on Rails</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+              </ul>
+              <button class="project-btn btn">See project</button>
+            </div>
+          </article>
+          <article class="project-cards flex-column">
+            <div class="content-cards flex-column">
+              <h3>Multi-Post Stories<br />Gain+Glory</h3>
+              <ul class="technologies flex-row">
+                <li>Ruby on Rails</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+              </ul>
+              <button class="project-btn btn">See project</button>
+            </div>
+          </article>
+        </div>
       </section>
       <!-- About me section -->
-      <section class="about-section">
+      <section id="About" class="about-section flex-column">
         <div class="about-me flex-column">
           <h2>About me</h2>
           <p>
@@ -179,7 +186,7 @@
         </ul>
       </section>
       <!-- Contact form section -->
-      <section class="contact-section flex-column">
+      <section id="Contact" class="contact-section flex-column">
         <h2>
           I'm always interested in hearing about new projects, so if you'd like
           to chat please get in touch.
@@ -223,39 +230,41 @@
           <button class="form-btn btn" type="submit">Get in touch</button>
         </form>
       </section>
-      <!-- Footer section -->
-      <footer class="footer-section flex-column">
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=new"
-          >viktorsb14@gmail.com</a
-        >
-        <ul class="social-media flex-row">
-          <li>
-            <a href="https://twitter.com/VctorMC20"
-              ><img src="icons/twitter.svg" alt="twitter icon"
-            /></a>
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/victormc13/"
-              ><img src="icons/Linkedin icon.svg" alt="linkedin icon"
-            /></a>
-          </li>
-          <li>
-            <a href="https://medium.com/"
-              ><img src="icons/medium.svg" alt="medium icon"
-            /></a>
-          </li>
-          <li>
-            <a href="https://github.com/victormc13"
-              ><img src="icons/github.svg" alt="github icon"
-            /></a>
-          </li>
-          <li>
-            <a href="https://wellfound.com/"
-              ><img src="icons/angellist.svg" alt="angellist icon"
-            /></a>
-          </li>
-        </ul>
-      </footer>
     </main>
+    <!-- Footer section -->
+    <footer class="footer-section flex-column">
+      <a
+        href="https://mail.google.com/mail/u/0/#inbox?compose=new"
+        class="hidden-mobile"
+        >viktorsb14@gmail.com</a
+      >
+      <ul class="social-media flex-row">
+        <li>
+          <a href="https://twitter.com/VctorMC20"
+            ><img src="icons/twitter.svg" alt="twitter icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/victormc13/"
+            ><img src="icons/Linkedin icon.svg" alt="linkedin icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://medium.com/"
+            ><img src="icons/medium.svg" alt="medium icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://github.com/victormc13"
+            ><img src="icons/github.svg" alt="github icon"
+          /></a>
+        </li>
+        <li>
+          <a href="https://wellfound.com/"
+            ><img src="icons/angellist.svg" alt="angellist icon"
+          /></a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

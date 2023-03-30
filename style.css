@@ -13,9 +13,7 @@
 * {
   margin: 0;
   padding: 0;
-  text-decoration: none;
   box-sizing: border-box;
-  list-style: none;
 }
 
 html,
@@ -25,6 +23,15 @@ body {
   font-style: normal;
   font-family: "Inter", sans-serif;
   color: var(--primary-blue-dark);
+}
+
+li,
+a,
+a:link,
+a:visited {
+  color: var(--primary-blue-dark);
+  text-decoration: none;
+  list-style: none;
 }
 
 nav {
@@ -37,6 +44,7 @@ nav {
 
 h1 {
   width: 90%;
+  letter-spacing: 1.37px;
   text-align: center;
   font-weight: 700;
   font-size: 40px;
@@ -44,6 +52,7 @@ h1 {
 }
 
 h1::after {
+  letter-spacing: 0;
   color: var(--primary-green);
   content: "I'm a software developer";
 }
@@ -66,16 +75,20 @@ h1::after {
   display: flex;
 }
 
-.intro-container {
-  height: 650px;
-  width: 100%;
-  padding: 2.5rem 2rem 2rem;
-  gap: 1rem;
-  justify-content: flex-end;
-  background-size: cover;
-  background-position: top center;
+header {
+  min-height: 700px;
+  background-size: 100%;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-image: url(icons/header-illsutration-mobile.svg);
+}
+
+.intro-container {
+  min-height: 100%;
+  width: 100%;
+  padding: 2rem 2rem 2rem;
+  gap: 1rem;
+  justify-content: flex-end;
 }
 
 .intro-container p {
@@ -105,14 +118,14 @@ a:visited {
 }
 
 main {
+  padding-top: 2rem;
   background-repeat: no-repeat;
-  background-position: right 98.6%;
+  background-position: right bottom;
   background-image: url(icons/illustration-contact-form.svg);
 }
 
 .main-title {
   height: 130px;
-  padding-top: 1.5rem;
   font-weight: 700;
   font-size: 40px;
   text-align: center;
@@ -121,13 +134,12 @@ main {
   background-image: url(icons/Indicator.svg);
 }
 
-.work-section {
+.projectcards-container {
   padding-top: 3.5rem;
   display: grid;
   justify-items: center;
-  grid-auto-rows: 29rem;
-  grid-template-columns: repeat(auto-fill, minmax(23rem, 1fr));
   gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
 }
 
 .project-cards {
@@ -204,8 +216,8 @@ main {
 }
 
 .about-me {
-  height: 57vh;
-  margin-top: 3.5rem;
+  min-height: 400px;
+  margin-top: 2rem;
   text-align: center;
   gap: 1.5rem;
   justify-content: flex-end;
@@ -243,13 +255,15 @@ main {
 
 .skillcards-container {
   padding-top: 4rem;
-  gap: 2rem;
+  justify-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
 }
 
 .skill-cards {
-  width: 327px;
-  height: 316px;
-  padding: 0 2rem 4rem;
+  min-width: 327px;
+  min-height: 316px;
+  padding: 0 0 4rem;
   text-align: center;
   justify-content: flex-end;
   gap: 1.5rem;
@@ -312,7 +326,6 @@ main {
 
 .form-fields {
   gap: 2rem;
-  text-align: center;
 }
 
 .form-fields input {
@@ -327,6 +340,10 @@ main {
   border-radius: 4px;
 }
 
+textarea::-webkit-resizer {
+  display: none;
+}
+
 .form-fields textarea {
   width: 327px;
   height: 114px;
@@ -335,7 +352,6 @@ main {
   line-height: 24px;
   border: 1px solid #d0d9d4;
   border-radius: 4px;
-  resize: none;
   background-repeat: no-repeat;
   background-position: bottom right;
   background-image: url(icons/Icon\ -\ Resizer\ Handle.svg);
@@ -352,7 +368,6 @@ textarea:focus {
 .form-btn {
   width: 129px;
   height: 48px;
-  margin-top: 1rem;
   font-weight: 500;
   font-size: 18px;
   border-radius: 4px;
@@ -363,7 +378,7 @@ textarea:focus {
 }
 
 .footer-section {
-  min-height: 150px;
+  height: 150px;
   padding-top: 1rem;
   gap: 2rem;
   background-repeat: no-repeat;
@@ -376,4 +391,149 @@ textarea:focus {
   font-size: 20px;
   line-height: 32px;
   color: #42526e;
+}
+
+.hidden-desktop {
+  display: none;
+}
+
+@media only screen and (min-width: 768px) {
+  .hidden-mobile {
+    display: none;
+  }
+
+  header {
+    min-height: 150%;
+    background-position: top;
+    background-image: url(icons/Header-llustration-desktop.svg);
+  }
+
+  main {
+    background-position: left 99%, 30% 95.9%, right 99.5%;
+    background-image:
+      url(icons/illustration-1-contact-form-desktop.svg),
+      url(icons/illustration-2-contact-form-desktop.svg),
+      url(icons/contact\ form-illustratoin-3-desktop.svg);
+  }
+
+  .nav-desktop {
+    min-height: 4rem;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .intro-container {
+    width: 70%;
+    height: 700px;
+    justify-content: center;
+  }
+
+  .intro-container h1 {
+    text-align: center;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: 0.37px;
+  }
+
+  .intro-container p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  .projectcards-container {
+    width: 80%;
+  }
+
+  .about-me {
+    margin-top: 5%;
+    justify-content: center;
+    background-position: right 5%, left 60%;
+    background-image:
+      url(icons/illustration-about\ me-1-desktop.svg),
+      url(icons/illustration-about-me-2-desktop.svg);
+  }
+
+  .about-me p {
+    width: 65%;
+    min-height: auto;
+    font-style: normal;
+    text-align: center;
+  }
+
+  .skillcards-container {
+    width: 80%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .skill-cards {
+    flex-basis: 330px;
+    flex-grow: 1;
+  }
+
+  .about-section {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+  }
+
+  .contact-section {
+    margin-top: 6rem;
+    min-height: 630px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .contact-section h2 {
+    width: 463px;
+    font-size: 30px;
+  }
+
+  .form-fields input,
+  .form-fields textarea {
+    width: 560px;
+    gap: 1rem;
+  }
+
+  .form-btn {
+    margin-top: 0;
+    align-self: flex-start;
+  }
+
+  .footer-section {
+    height: 90px;
+    padding: 0;
+    border-top: 2px solid #dfe1e6;
+    background-image: none;
+    justify-content: center;
+  }
+
+  .social-media :nth-child(1) {
+    order: 4;
+  }
+
+  .social-media :nth-child(2) {
+    order: 2;
+  }
+
+  .social-media :nth-child(3) {
+    order: 5;
+  }
+
+  .social-media :nth-child(4) {
+    order: 1;
+  }
+
+  .social-media :nth-child(5) {
+    order: 3;
+  }
 }
