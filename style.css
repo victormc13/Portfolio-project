@@ -470,12 +470,7 @@ textarea:focus {
     display: flex;
     gap: 2rem;
     flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .skill-cards {
-    flex-basis: 330px;
-    flex-grow: 1;
+    justify-content: center;
   }
 
   .about-section {
