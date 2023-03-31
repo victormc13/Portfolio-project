@@ -104,6 +104,7 @@ a:visited {
   align-items: baseline;
 }
 
+/* Adding animation to social media icons */
 .social-media li:hover {
   transform: scale(1.5);
 }
