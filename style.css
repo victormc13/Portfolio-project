@@ -402,7 +402,8 @@ textarea:focus {
 
   header {
     min-height: 140%;
-    background: url(icons/Header-llustration-desktop.svg) top;
+    background: url(icons/Header-llustration-desktop.svg) no-repeat top;
+    background-size: 100%;
   }
 
   main {
