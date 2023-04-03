@@ -161,12 +161,20 @@ a:visited {
 .down-btn {
   padding: 8px;
   margin-top: 3rem;
+  height: 40px;
+  width: 40px;
   line-height: 50%;
   text-align: center;
   border-radius: 50%;
   border: 1px solid #dfe1e6;
   background-color: var(--primary-white-light);
+  background: url(icons/Icon\ -\ Chevron\ -\ Down\ -\ Larger.svg) no-repeat center;
   cursor: pointer;
+}
+
+.down-btn:hover {
+  box-shadow: 0 -8px 16px 0 rgba(19, 88, 60, 0.24);
+  transition: box-shadow 0.3s ease-out;
 }
 
 main {
