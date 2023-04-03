@@ -77,10 +77,8 @@ h1::after {
 
 header {
   min-height: 700px;
+  background: url(icons/header-illsutration-mobile.svg) no-repeat center;
   background-size: 100%;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-image: url(icons/header-illsutration-mobile.svg);
 }
 
 .intro-container {
@@ -99,6 +97,54 @@ header {
   line-height: 28px;
 }
 
+.slide-left {
+  animation: slideleft 1s linear forwards;
+}
+
+@keyframes slideleft {
+  from {
+    transform: translate(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  animation: slideright 1s linear forwards;
+}
+
+@keyframes slideright {
+  from {
+    transform: translate(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideup 1s linear forwards;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .social-media,
 a:visited {
   color: var(--primary-blue-dark);
@@ -106,22 +152,33 @@ a:visited {
   align-items: baseline;
 }
 
+/* Adding animation to social media icons */
+.social-media img:hover {
+  transform: scale(1.5);
+  transition: transform 0.3s ease-in-out;
+}
+
 .down-btn {
   padding: 8px;
   margin-top: 3rem;
+  height: 40px;
+  width: 40px;
   line-height: 50%;
   text-align: center;
   border-radius: 50%;
   border: 1px solid #dfe1e6;
-  background-color: var(--primary-white-light);
+  background: url(icons/Icon\ -\ Chevron\ -\ Down\ -\ Larger.svg) no-repeat center center;
   cursor: pointer;
+}
+
+.down-btn:hover {
+  box-shadow: 0 0 10px 6px rgba(19, 88, 60, 0.24);
+  transition: box-shadow 0.3s ease-out;
 }
 
 main {
   padding-top: 2rem;
-  background-repeat: no-repeat;
-  background-position: right bottom;
-  background-image: url(icons/illustration-contact-form.svg);
+  background: url(icons/illustration-contact-form.svg) no-repeat right bottom;
 }
 
 .main-title {
@@ -129,9 +186,7 @@ main {
   font-weight: 700;
   font-size: 40px;
   text-align: center;
-  background-position: bottom center;
-  background-repeat: no-repeat;
-  background-image: url(icons/Indicator.svg);
+  background: url(icons/Indicator.svg) no-repeat bottom;
 }
 
 .projectcards-container {
@@ -221,11 +276,10 @@ main {
   text-align: center;
   gap: 1.5rem;
   justify-content: flex-end;
-  background-repeat: no-repeat;
-  background-position: top right, bottom left;
-  background-image:
-    url(icons/illustration\ 1-\ about\ me-mobile.svg),
-    url(icons/illustration\ 2-about\ me\ mobile.svg);
+  background:
+    url(icons/illustration\ 1-\ about\ me-mobile.svg) no-repeat top
+    right,
+    url(icons/illustration\ 2-about\ me\ mobile.svg) no-repeat bottom left;
 }
 
 .about-me h2 {
@@ -352,17 +406,18 @@ textarea::-webkit-resizer {
   line-height: 24px;
   border: 1px solid #d0d9d4;
   border-radius: 4px;
-  background-repeat: no-repeat;
-  background-position: bottom right;
-  background-image: url(icons/Icon\ -\ Resizer\ Handle.svg);
+  background: url(icons/Icon\ -\ Resizer\ Handle.svg) no-repeat bottom right;
 }
 
 input:focus,
 textarea:focus {
   outline: none;
   border: 2px solid #60c095;
-  font-weight: 400;
+  font-weight: 500;
   font-size: 1rem;
+  box-shadow: 0 -8px 16px 0 rgba(19, 88, 60, 0.24);
+  transform: translateY(5px);
+  transition: transform 0.5s ease-out, box-shadow 0.3s ease-out;
 }
 
 .form-btn {
@@ -381,9 +436,7 @@ textarea:focus {
   height: 150px;
   padding-top: 1rem;
   gap: 2rem;
-  background-repeat: no-repeat;
-  background-position: center bottom;
-  background-image: url(icons/Light.svg);
+  background: url(icons/Light.svg) no-repeat center bottom;
 }
 
 .footer-section > a {
@@ -403,26 +456,40 @@ textarea:focus {
   }
 
   header {
-    min-height: 150%;
-    background-position: top;
-    background-image: url(icons/Header-llustration-desktop.svg);
+    min-height: 140%;
+    background: url(icons/Header-llustration-desktop.svg) no-repeat top;
+    background-size: 100%;
   }
 
   main {
-    background-position: left 99%, 30% 95.9%, right 99.5%;
-    background-image:
-      url(icons/illustration-1-contact-form-desktop.svg),
-      url(icons/illustration-2-contact-form-desktop.svg),
-      url(icons/contact\ form-illustratoin-3-desktop.svg);
+    background:
+      url(icons/illustration-1-contact-form-desktop.svg) no-repeat
+      left 99%,
+      url(icons/illustration-2-contact-form-desktop.svg) no-repeat 30% 95.9%,
+      url(icons/contact\ form-illustratoin-3-desktop.svg) no-repeat right 99.5%;
   }
 
   .nav-desktop {
+    position: fixed;
     min-height: 4rem;
     font-size: 1rem;
     font-weight: 700;
     display: flex;
     justify-content: center;
     gap: 2rem;
+    animation: slidedown 1.5s linear forwards;
+  }
+
+  @keyframes slidedown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .intro-container {
@@ -445,6 +512,10 @@ textarea:focus {
     line-height: 32px;
   }
 
+  .main-title {
+    justify-content: center;
+  }
+
   .projectcards-container {
     width: 80%;
   }
@@ -452,10 +523,10 @@ textarea:focus {
   .about-me {
     margin-top: 5%;
     justify-content: center;
-    background-position: right 5%, left 60%;
-    background-image:
-      url(icons/illustration-about\ me-1-desktop.svg),
-      url(icons/illustration-about-me-2-desktop.svg);
+    background:
+      url(icons/illustration-about\ me-1-desktop.svg) no-repeat right
+      5%,
+      url(icons/illustration-about-me-2-desktop.svg) no-repeat left 60%;
   }
 
   .about-me p {
@@ -499,6 +570,17 @@ textarea:focus {
     gap: 1rem;
   }
 
+  input:focus,
+  textarea:focus {
+    outline: none;
+    border: 2px solid #60c095;
+    font-weight: 500;
+    font-size: 1rem;
+    box-shadow: -8px 8px 16px 0 rgba(19, 88, 60, 0.24);
+    transform: translate(10px);
+    transition: transform 0.5s ease-out, box-shadow 0.3s ease-in-out;
+  }
+
   .form-btn {
     margin-top: 0;
     align-self: flex-start;
@@ -508,7 +590,7 @@ textarea:focus {
     height: 90px;
     padding: 0;
     border-top: 2px solid #dfe1e6;
-    background-image: none;
+    background: none;
     justify-content: center;
   }
 

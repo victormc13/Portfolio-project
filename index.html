@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="icons/VMicon.ico" type="image/x-icon" />
     <title>Victor-Miñope</title>
   </head>
 
@@ -22,13 +23,13 @@
       </nav>
       <!-- Intro section -->
       <section class="intro-container flex-column">
-        <h1>Hey there. I’m Victor.<br /></h1>
-        <p>
+        <h1 class="slide-left">Hey there. I’m Victor.<br /></h1>
+        <p class="slide-right">
           I can help you build a product , feature or website Look through some
           of my work and experience! If you like what you see and have a project
           you need coded, don’t hesitate to contact me.
         </p>
-        <ul class="social-media flex-row">
+        <ul class="social-media flex-row slide-up">
           <li>
             <a href="https://twitter.com/VctorMC20"
               ><img src="icons/twitter.svg" alt="twitter icon"
@@ -55,18 +56,16 @@
             /></a>
           </li>
         </ul>
-        <button class="down-btn">
-          <img
-            src="icons/Icon - Chevron - Down - Larger.svg"
-            alt="down button"
-          />
-        </button>
+        <button class="down-btn slide-up"></button>
       </section>
     </header>
     <main>
       <!-- My Recent works section -->
       <section id="Portfolio" class="work-section flex-column">
-        <h2 class="main-title flex-column">My Recent<br />Works</h2>
+        <h2 class="main-title flex-column">
+          My Recent<br class="hidden-mobile" />
+          Works
+        </h2>
         <div class="projectcards-container">
           <article class="project-cards flex-column">
             <div class="content-cards flex-column">
