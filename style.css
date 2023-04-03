@@ -97,6 +97,54 @@ header {
   line-height: 28px;
 }
 
+.slide-left {
+  animation: slideleft 1s linear forwards;
+}
+
+@keyframes slideleft {
+  from {
+    transform: translate(100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.slide-right {
+  animation: slideright 1s linear forwards;
+}
+
+@keyframes slideright {
+  from {
+    transform: translate(-100px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translate(0);
+    opacity: 1;
+  }
+}
+
+.slide-up {
+  animation: slideup 1s linear forwards;
+}
+
+@keyframes slideup {
+  from {
+    transform: translateY(400px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .social-media,
 a:visited {
   color: var(--primary-blue-dark);
@@ -415,12 +463,25 @@ textarea:focus {
   }
 
   .nav-desktop {
+    position: fixed;
     min-height: 4rem;
     font-size: 1rem;
     font-weight: 700;
     display: flex;
     justify-content: center;
     gap: 2rem;
+    animation: slidedown 1.5s linear forwards;
+  }
+
+  @keyframes slidedown {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .intro-container {
